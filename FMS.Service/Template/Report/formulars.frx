@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/09/2016 23:32:01" ReportInfo.Modified="06/20/2016 22:25:27" 
+  ReportInfo.CreatorVersion="2016.2.12.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="list" ReferenceName="list" DataType="System.Guid" Enabled="true">
+      <Column Name="ID" DataType="System.Guid"/>
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="Code" DataType="System.String"/>
+      <Column Name="UserID" DataType="System.String"/>
+      <Column Name="CreateDate" DataType="System.DateTime"/>
+    </BusinessObjectDataSource>
+    <BusinessObjectDataSource Name="titles" ReferenceName="titles" DataType="System.String" Enabled="true">
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="Code" DataType="System.String"/> 
+      <Column Name="CreateDate" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page">
+    <ColumnHeaderBand Name="ColumnHeader1" Width="718.2" Height="25.35">
+      <TextObject Name="Text1" Left="56.7" Top="6.45" Width="103.95" Height="18.9" Text="[titles.Title]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text4" Left="232.35" Top="6.45" Width="103.95" Height="18.9" Text="[titles.Code]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text5" Left="462.7" Top="6.45" Width="141.75" Height="18.9" Text="[titles.CreateDate]" Font="SimSun, 9pt"/>
+    </ColumnHeaderBand>
+    <DataBand Name="t" Top="29.35" Width="718.2" Height="22.35" DataSource="list">
+      <TextObject Name="Text2" Left="222.9" Top="3.45" Width="170.1" Height="18.9" Text="[list.Title]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text3" Left="51.98" Top="3.45" Width="141.75" Height="18.9" Text="[list.Code]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text6" Left="467.42" Top="3.45" Width="141.75" Height="18.9" Text="[list.CreateDate]" Format="Custom" Format.Format="yyyy-MM-dd HH:mm" Font="SimSun, 9pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

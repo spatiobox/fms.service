@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/09/2016 23:32:01" ReportInfo.Modified="06/10/2016 16:28:22" ReportInfo.CreatorVersion="2016.2.12.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="material" ReferenceName="material" DataType="System.Guid" Enabled="true">
+      <Column Name="ID" DataType="System.Guid"/>
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="Code" DataType="System.String"/>
+      <Column Name="UserID" DataType="System.String"/>
+    </BusinessObjectDataSource>
+    <BusinessObjectDataSource Name="titles" ReferenceName="titles" DataType="System.String" Enabled="true">
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="Code" DataType="System.String"/> 
+      <Column Name="CreateDate" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page">
+    <ColumnHeaderBand Name="ColumnHeader1" Width="718.2" Height="23.35">
+      <TextObject Name="Text1" Left="56.7" Top="4.45" Width="94.5" Height="18.9" Text="[titles.Code]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text4" Left="252.35" Top="4.45" Width="94.5" Height="18.9" Text="[titles.Title]" Font="SimSun, 9pt"/>
+    </ColumnHeaderBand>
+    <DataBand Name="m" Top="27.35" Width="718.2" Height="24.35" DataSource="material">
+      <TextObject Name="Text3" Left="51.98" Top="5.45" Width="122.85" Height="18.9" Text="[material.Code]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text2" Left="242.9" Top="5.45" Width="151.2" Height="18.9" Text="[material.Title]" Font="SimSun, 9pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

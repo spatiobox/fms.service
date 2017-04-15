@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/09/2016 23:32:01" ReportInfo.Modified="11/03/2016 23:37:25" ReportInfo.CreatorVersion="2016.2.12.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="record" ReferenceName="record" DataType="System.Guid" Enabled="true">
+      <Column Name="ID" DataType="System.Guid"/>
+      <Column Name="UserID" DataType="System.String"/>
+      <Column Name="FormularID" DataType="System.Guid"/>
+      <Column Name="FormularCode" DataType="System.String"/>
+      <Column Name="FormularTitle" DataType="System.String"/>
+      <Column Name="MaterialID" DataType="System.Guid"/>
+      <Column Name="MaterialCode" DataType="System.String"/>
+      <Column Name="MaterialTitle" DataType="System.String"/>
+      <Column Name="Device" DataType="System.String"/>
+      <Column Name="Copies" DataType="System.Int32"/>
+      <Column Name="StandardWeight" DataType="System.Decimal"/>
+      <Column Name="Weight" DataType="System.Decimal"/>
+      <Column Name="RecordDate" DataType="System.DateTime"/>
+      <Column Name="UserName" DataType="System.String"/>
+      <Column Name="FullName" DataType="System.String"/>
+      <Column Name="Department" DataType="System.String"/>
+      <Column Name="Position" DataType="System.String"/>
+      <Column Name="Remark" DataType="System.String"/>
+      <Column Name="BatchNo" DataType="System.String"/>
+      <Column Name="Viscosity" DataType="System.String"/>
+      <Column Name="OrgID" DataType="System.Int32"/>
+      <Column Name="OrgTitle" DataType="System.String"/>
+    </BusinessObjectDataSource>
+    <BusinessObjectDataSource Name="titles" ReferenceName="titles" DataType="System.String" Enabled="true">
+      <Column Name="Title" DataType="System.String"/>
+      <Column Name="Code" DataType="System.String"/>
+      <Column Name="CreateDate" DataType="System.String"/>
+      <Column Name="Deviation" DataType="System.String"/>
+      <Column Name="FormularTitle" DataType="System.String"/>
+      <Column Name="MaterialTitle" DataType="System.String"/>
+      <Column Name="Weight" DataType="System.String"/>
+      <Column Name="Copies" DataType="System.String"/>
+      <Column Name="RecordDate" DataType="System.String"/>
+      <Column Name="UserName" DataType="System.String"/>
+      <Column Name="FullName" DataType="System.String"/>
+      <Column Name="Department" DataType="System.String"/>
+      <Column Name="Position" DataType="System.String"/>
+      <Column Name="Remark" DataType="System.String"/>
+      <Column Name="BatchNo" DataType="System.String"/>
+      <Column Name="Viscosity" DataType="System.String"/>
+      <Column Name="Ratio" DataType="System.String"/>
+      <Column Name="IsRatio" DataType="System.String"/>
+      <Column Name="Organization" DataType="System.String"/>
+      <Column Name="Directory" DataType="System.String"/>
+    </BusinessObjectDataSource>
+  </Dictionary>
+  <ReportPage Name="Page" Landscape="true" PaperWidth="297" PaperHeight="210">
+    <ColumnHeaderBand Name="ColumnHeader1" Width="1047.06" Height="28.35"> 
+      <TextObject Name="Text2" Left="125.3" Top="9.45" Width="141.75" Height="18.9" Text="[titles.FormularTitle]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text3" Left="258.63" Top="9.45" Width="103.95" Height="18.9" Text="[titles.MaterialTitle]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text4" Left="363.95" Top="9.45" Width="66.15" Height="18.9" Text="[titles.Copies]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text5" Left="419.57" Top="9.45" Width="94.5" Height="18.9" Text="[titles.Ratio]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text6" Left="490.1" Top="9.45" Width="141.75" Height="18.9" Text="[titles.RecordDate]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text7" Left="618.37" Top="9.45" Width="103.95" Height="18.9" Text="[titles.FullName]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text8" Left="696.65" Top="9.45" Width="122.85" Height="18.9" Text="[titles.Department]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text9" Left="783.75" Top="9.45" Width="122.85" Height="18.9" Text="[titles.Position]" Font="SimSun, 9pt"/>
+    </ColumnHeaderBand>
+    <DataBand Name="rc" Top="32.35" Width="1047.06" Height="24.35" DataSource="record">
+      <TextObject Name="Text102" Left="125.3" Top="5.45" Width="141.75" Height="18.9" CanGrow="true" Text="[record.FormularTitle]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text103" Left="258.63" Top="5.45" Width="103.95" Height="18.9" CanGrow="true" Text="[record.MaterialTitle]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text104" Left="363.95" Top="5.45" Width="66.15" Height="18.9" CanGrow="true" Text="[record.Copies]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text105" Left="419.57" Top="5.45" Width="94.5" Height="18.9" CanGrow="true" Text="[record.Weight]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text106" Left="489.47" Top="5.45" Width="141.75" Height="18.9" CanGrow="true" Text="[record.RecordDate]" Format="Custom" Format.Format="yyyy-MM-dd HH:mm" Font="SimSun, 9pt"/>
+      <TextObject Name="Text107" Left="618.37" Top="5.45" Width="103.95" Height="18.9" CanGrow="true" Text="[record.FullName]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text108" Left="696.65" Top="5.45" Width="122.85" Height="18.9" CanGrow="true" Text="[record.Department]" Font="SimSun, 9pt"/>
+      <TextObject Name="Text109" Left="783.75" Top="5.45" Width="122.85" Height="18.9" CanGrow="true" Text="[record.Position]" Font="SimSun, 9pt"/> 
+    </DataBand>
+  </ReportPage>
+</Report>
